@@ -1,7 +1,7 @@
 # JS Adagrams
 ## At a Glance
 - Individual, [stage 1](https://github.com/Ada-Developers-Academy/pedagogy/blob/master/classroom/rule-of-three.md#stage-1) project
-- Due before class, **DATE HERE**
+- Due before class, **Monday December 14th at 9am**
 - Submit this project with a PR
 
 ## Introduction
@@ -84,14 +84,14 @@ In addition to the provided unit tests we have provided a demo game application 
 ### Project Structure
 This repository has a baseline structure for the project which includes several files. You will only need to modify one of them:
 
-File | Description
---- | ---
-src/adagrams.js | This is the project code, your implementation should be written here as functions within the `Adagrams` object.
-test/adagrams.test.js | This file contains the unit tests for all functions you must implement.
-package.json | This is the [npm project description file](https://docs.npmjs.com/getting-started/using-a-package.json) for this project. It includes all of the dependencies, much like `Gemfile` in our Ruby projects.
-package-lock.json | This is equivalent to the `Gemfile.lock` file in our Ruby projects.
-jest.config.js | This is a configuration file for the Jest testing framework.
-babel.config.js | This is a configuration file for the [Babel](https://babeljs.io/) compiler. For a short summary of why we use it, [click here](https://github.com/AdaGold/backbone-baseline#major-components)
+| File                  | Description                                                                                                                                                                                              |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| src/adagrams.js       | This is the project code, your implementation should be written here as functions within the `Adagrams` object.                                                                                          |
+| test/adagrams.test.js | This file contains the unit tests for all functions you must implement.                                                                                                                                  |
+| package.json          | This is the [npm project description file](https://docs.npmjs.com/getting-started/using-a-package.json) for this project. It includes all of the dependencies, much like `Gemfile` in our Ruby projects. |
+| package-lock.json     | This is equivalent to the `Gemfile.lock` file in our Ruby projects.                                                                                                                                      |
+| jest.config.js        | This is a configuration file for the Jest testing framework.                                                                                                                                             |
+| babel.config.js       | This is a configuration file for the [Babel](https://babeljs.io/) compiler. For a short summary of why we use it, [click here](https://github.com/AdaGold/backbone-baseline#major-components)            |
 
 #### Provided code
 In the `src/adagrams.js` file there is a bit of code provided already. This is the structure that your code should follow in order for the pre-written unit tests to find and call your functions properly.
@@ -133,20 +133,20 @@ Our first job is to build a hand of 10 letters. To do so, add a function called 
 
 #### Distribution of Letters
 | Letter : Qty. | Letter : Qty. |
-|:------:|:-----:|
-| A : 9  | N : 6 |
-| B : 2  | O : 8 |
-| C : 2  | P : 2 |
-| D : 4  | Q : 1 |
-| E : 12 | R : 6 |
-| F : 2  | S : 4 |
-| G : 3  | T : 6 |
-| H : 2  | U : 4 |
-| I : 9  | V : 2 |
-| J : 1  | W : 2 |
-| K : 1  | X : 1 |
-| L : 4  | Y : 2 |
-| M : 2  | Z : 1 |
+| :-----------: | :-----------: |
+|     A : 9     |     N : 6     |
+|     B : 2     |     O : 8     |
+|     C : 2     |     P : 2     |
+|     D : 4     |     Q : 1     |
+|    E : 12     |     R : 6     |
+|     F : 2     |     S : 4     |
+|     G : 3     |     T : 6     |
+|     H : 2     |     U : 4     |
+|     I : 9     |     V : 2     |
+|     J : 1     |     W : 2     |
+|     K : 1     |     X : 1     |
+|     L : 4     |     Y : 2     |
+|     M : 2     |     Z : 1     |
 
 **Note:** Making sure that the drawn letters match the rules of the letter pool can be straightforward or very difficult, depending on how you build the data structure for the letter pool. It is worth spending some time to think carefully about this.
 
@@ -175,15 +175,15 @@ Make a function named `scoreWord` in the `Adagrams` object in `src/adagrams.js`.
 - If the length of the word is 7, 8, 9, or 10, then the word gets an additional 8 points
 
 #### Score chart
-|Letter                        | Value|
-|:----------------------------:|:----:|
-|A, E, I, O, U, L, N, R, S, T  |   1  |
-|D, G                          |   2  |
-|B, C, M, P                    |   3  |
-|F, H, V, W, Y                 |   4  |
-|K                             |   5  |
-|J, X                          |   8  |
-|Q, Z                          |   10 |
+|            Letter            | Value |
+| :--------------------------: | :---: |
+| A, E, I, O, U, L, N, R, S, T |   1   |
+|             D, G             |   2   |
+|          B, C, M, P          |   3   |
+|        F, H, V, W, Y         |   4   |
+|              K               |   5   |
+|             J, X             |   8   |
+|             Q, Z             |  10   |
 
 ### Wave 4
 After several hands have been drawn, words have been submitted, checked, scored, and played, we want a way to find the highest scoring word. This function looks at the array of `words` and calculates which of these words has the highest score, applies any tie-breaking logic, and returns the winning word in a special data structure.
