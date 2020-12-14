@@ -59,28 +59,46 @@ const Adagrams = {
 
     for (let i = 0; i < word.length; i += 1) {
       switch (word[i].toUpperCase()) {
-        case "A", "E", "I", "O", "U", "L", "N", "R", "S", "T":
+        case "A":
+        case "E":
+        case "I":
+        case "O":
+        case "U":
+        case "L":
+        case "N":
+        case "R":
+        case "S":
+        case "T":
           score += 1;
           break;
-        case "D", "G":
+        case "D":
+        case "G":
           score += 2;
           break;
-        case "B", "C", "M", "P":
+        case "B":
+        case "C":
+        case "M":
+        case "P":
           score += 3;
           break;
-        case "F", "H", "V", "W", "Y":
+        case "F":
+        case "H":
+        case "V":
+        case "W":
+        case "Y":
           score += 4;
           break;
         case "K":
           score += 5;
           break;
-        case "J", "X":
+        case "J":
+        case "X":
           score += 8;
           break;
-        case "Q", "Z":
+        case "Q":
+        case "Z":
           score += 10;
           break;
-
       }
     }
     if (word.length >= 7 && word.length <= 10) {
@@ -90,45 +108,39 @@ const Adagrams = {
   },
 
 
-  highestScoreFrom(words) {
-    let highestScore = 0;
-    let highestScoreLength = 0;
-    let highestWord = null;
+  // highestScoreFrom(words) {
+  //   let highestScore = 0;
+  //   let highestScoreLength = 0;
+  //   let highestWord = null;
 
-    for (let i = 0; i < words.length; i += 1) {
-      let word = words[i];
-      let score = scoreWord(word);
+  //   for (let i = 0; i < words.length; i += 1) {
+  //     let word = words[i];
+  //     let score = scoreWord(word);
 
-      words.forEach([word, score])
 
-      if (highestScore < score) {
-        highestScore == score;
-        highestWord = word;
-        highestScoreLength == word.length;
-      } else if (highest_score == score && highest_score_length != 10) {
-        if (word.length == 10) {
-          highestScoreLength = word.length;
-          highestWord = word;
-        }
+  //     if (highestScore < score) {
+  //       highestScore == score;
+  //       highestWord = word;
+  //       highestScoreLength == word.length;
+  //     } else if (highest_score == score && highest_score_length != 10) {
+  //       if (word.length == 10) {
+  //         highestScoreLength = word.length;
+  //         highestWord = word;
+  //       }
 
-      } else if (word.length < HighestWord.length) {
-        highestScoreLength == word;
-        highest_word = word;
+  //     } else if (word.length < HighestWord.length) {
+  //       highestScoreLength == word;
+  //       highest_word = word;
 
-      }
+  //     }
 
-      highestScoreObject = {
-        word: highestWord,
-        score: highestScore
-      }
-    }
-  }
+  //     highestScoreObject = {
+  //       word: highestWord,
+  //       score: highestScore
+  //     }
+  //   }
+  // }
 }
-
-
-
-
-
 
 
 // Do not remove this line or your tests will break!
