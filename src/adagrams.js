@@ -30,10 +30,10 @@ const alpha = [
 const Adagrams = {
   drawLetters() {
 
-    let newAlpha = [];
+    const newAlpha = [];
 
     for (let i = 0; i < 10; i++) {
-      let idx = Math.floor(Math.random() * alpha.length);
+      const idx = Math.floor(Math.random() * alpha.length);
       newAlpha.push(alpha[idx]);
       alpha.splice(idx, 1);
     }
